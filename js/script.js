@@ -16,7 +16,7 @@ if (eta < 18) {
 }
 
 //5. sconto del 40% per over 65
-if (eta > 65) {
+else if (eta > 65) {
   var sconto40 = ((prezzo * 40) / 100 );
   console.log('lo sconto agli over 65 è di ' + sconto40 + ' €');
   var prezzoOver65 = prezzo - sconto40;
