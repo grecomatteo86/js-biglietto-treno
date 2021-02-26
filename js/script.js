@@ -22,3 +22,9 @@ if (eta > 65) {
   var prezzoOver65 = prezzo - sconto40;
   alert ('salve, il suo biglietto costa ' + prezzoOver65 + ' €, grazie per averci scelto e buon viaggio');
 }
+
+//6. prezzo intero
+else {
+  console.log('l\'utente\' paga il biglietto intero');
+  alert ('il prezzo del suo biglietto è ' + prezzo + ' €, la compagnia le augura un buon viaggio');
+}
