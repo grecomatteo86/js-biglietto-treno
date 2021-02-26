@@ -9,5 +9,8 @@ var prezzo = km * 0.21;
 
 //4. sconto del 20% per i minorenni
 if (eta < 18) {
-  alert('il tuo biglietto costa ' + ((prezzo * 20) / 100 ) + '€');
+  var sconto20 = ((prezzo * 20) / 100 );
+  console.log('lo sconto ai minorenni è di ' + sconto20 + '€');
+  var prezzoMinorenne = prezzo - sconto20;
+  alert('bella zio, per il tuo biglietto ti devi fare dare da mamma e papà ' + prezzoMinorenne + ' €');
 }
