@@ -2,7 +2,7 @@
 var km = parseInt(prompt('quanti km vuoi percorrere?'));
 //debug in console
 console.log('l\'utente vuole percorrere ' + km + ' km');
-//controllo ulteriore se l'utente non inserisce un numero
+//controllo ulteriore se l'utente non inserisce un numero e debug
 if(isNaN(km)){
   var km = parseInt(prompt('quanti km vuoi percorrere? DEVI inserire un NUMERO'));
   console.log('l\'utente vuole percorrere ' + km + ' km');
@@ -12,7 +12,7 @@ if(isNaN(km)){
 var eta = parseInt(prompt('quanti anni hai?'));
 //debug in console
 console.log('l\'utente ha dichiarato ' + eta + ' anni');
-//controllo ulteriore se l'utente non inserisce un numero
+//controllo ulteriore se l'utente non inserisce un numero e debug
 if(isNaN(eta)){
   var eta = parseInt(prompt('quanti anni hai? DEVI inserire un NUMERO'));
   console.log('l\'utente ha dichiarato ' + eta + ' anni');
