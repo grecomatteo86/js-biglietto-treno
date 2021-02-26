@@ -1,10 +1,10 @@
 //1.chiedo all'utente il numero di km che intende percorrere
 var km = parseInt(prompt('quanti km vuoi percorrere?'));
-console.log(km + ' km');
+console.log('l\'utente vuole percorrere ' + km + ' km');
 
 //2. chiedo all'utente la sua età
 var eta = parseInt(prompt('quanti anni hai?'));
-console.log(eta + ' anni');
+console.log('l\'utente ha dichiarato ' + eta + ' anni');
 
 //3. calcolo prezzo biglietto in base ai km (0.21 € al km)
 var prezzo = km * 0.21;
@@ -27,6 +27,6 @@ else if (eta > 65) {
 
 //6. prezzo intero
 else {
-  console.log('l\'utente\' paga il biglietto intero');
+  console.log('l\'utente paga il biglietto intero');
   alert ('il prezzo del suo biglietto è ' + prezzo + ' €, la compagnia le augura un buon viaggio');
 }
