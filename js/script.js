@@ -10,7 +10,15 @@ var prezzo = km * 0.21;
 //4. sconto del 20% per i minorenni
 if (eta < 18) {
   var sconto20 = ((prezzo * 20) / 100 );
-  console.log('lo sconto ai minorenni è di ' + sconto20 + '€');
+  console.log('lo sconto ai minorenni è di ' + sconto20 + ' €');
   var prezzoMinorenne = prezzo - sconto20;
-  alert('bella zio, per il tuo biglietto ti devi fare dare da mamma e papà ' + prezzoMinorenne + ' €');
+  alert ('bella zio, per il tuo biglietto ti devi fare dare da mamma e papà ' + prezzoMinorenne + ' €');
+}
+
+//5. sconto del 40% per over 65
+if (eta > 65) {
+  var sconto40 = ((prezzo * 40) / 100 );
+  console.log('lo sconto agli over 65 è di ' + sconto40 + ' €');
+  var prezzoOver65 = prezzo - sconto40;
+  alert ('salve, il suo biglietto costa ' + prezzoOver65 + ' €, grazie per averci scelto e buon viaggio');
 }
