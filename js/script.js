@@ -1,10 +1,22 @@
 //1.chiedo all'utente il numero di km che intende percorrere
 var km = parseInt(prompt('quanti km vuoi percorrere?'));
+//debug in console
 console.log('l\'utente vuole percorrere ' + km + ' km');
+//controllo ulteriore se l'utente non inserisce un numero
+if(isNaN(km)){
+  var km = parseInt(prompt('quanti km vuoi percorrere? DEVI inserire un NUMERO'));
+  console.log('l\'utente vuole percorrere ' + km + ' km');
+}
 
 //2. chiedo all'utente la sua età
 var eta = parseInt(prompt('quanti anni hai?'));
+//debug in console
 console.log('l\'utente ha dichiarato ' + eta + ' anni');
+//controllo ulteriore se l'utente non inserisce un numero
+if(isNaN(eta)){
+  var eta = parseInt(prompt('quanti anni hai? DEVI inserire un NUMERO'));
+  console.log('l\'utente ha dichiarato ' + eta + ' anni');
+}
 
 //3. calcolo prezzo biglietto in base ai km (0.21 € al km)
 var prezzo = km * 0.21;
