@@ -1,44 +1,27 @@
-//1.chiedo all'utente il numero di km che intende percorrere
-var km = parseInt(prompt('quanti km vuoi percorrere?'));
-//debug in console
-console.log('l\'utente vuole percorrere ' + km + ' km');
-//controllo ulteriore se l'utente non inserisce un numero e debug
-if(isNaN(km)){
-  var km = parseInt(prompt('quanti km vuoi percorrere? DEVI inserire un NUMERO'));
-  console.log('l\'utente vuole percorrere ' + km + ' km');
+var kmUtente = parseInt(prompt('Caro utente, quanti km vuoi percorrere?'));
+while (isNaN(kmUtente)){
+  var kmUtente = parseInt(prompt('Quanti km vuoi percorrere? DEVI inserire un NUMERO'));
 }
-
-//2. chiedo all'utente la sua età
-var eta = parseInt(prompt('quanti anni hai?'));
-//debug in console
-console.log('l\'utente ha dichiarato ' + eta + ' anni');
-//controllo ulteriore se l'utente non inserisce un numero e debug
-if(isNaN(eta)){
-  var eta = parseInt(prompt('quanti anni hai? DEVI inserire un NUMERO'));
-  console.log('l\'utente ha dichiarato ' + eta + ' anni');
+console.log('L\'utente vuole percorrere ' + kmUtente + ' km');
+var etaUtente = parseInt(prompt('Quanti anni hai?'));
+while(isNaN(etaUtente)){
+  var etaUtente = parseInt(prompt('Caro utente, quanti anni hai? DEVI inserire un NUMERO'));
 }
-
-//3. calcolo prezzo biglietto in base ai km (0.21 € al km)
-var prezzo = km * 0.21;
-
-//4. sconto del 20% per i minorenni
-if (eta < 18) {
-  var sconto20 = ((prezzo * 20) / 100 );
+console.log('L\'utente ha dichiarato di avere ' + etaUtente + ' anni');
+var prezzoBase = (kmUtente * 0.21).toFixed(2);
+if (etaUtente < 18) {
+  var sconto20 = ((prezzoBase * 20) / 100 );
   console.log('lo sconto ai minorenni è di ' + sconto20 + ' €');
-  var prezzoMinorenne = prezzo - sconto20;
+  var prezzoMinorenne = (prezzoBase - sconto20).toFixed(2);
   alert ('bella zio, per il tuo biglietto ti devi fare dare da mamma e papà ' + prezzoMinorenne + ' €');
 }
-
-//5. sconto del 40% per over 65
-else if (eta > 65) {
-  var sconto40 = ((prezzo * 40) / 100 );
+else if (etaUtente > 65) {
+  var sconto40 = ((prezzoBase * 40) / 100 );
   console.log('lo sconto agli over 65 è di ' + sconto40 + ' €');
-  var prezzoOver65 = prezzo - sconto40;
+  var prezzoOver65 = (prezzoBase - sconto40).toFixed(2);
   alert ('salve, il suo biglietto costa ' + prezzoOver65 + ' €, grazie per averci scelto e buon viaggio');
 }
-
-//6. prezzo intero
 else {
   console.log('l\'utente paga il biglietto intero');
-  alert ('il prezzo del suo biglietto è ' + prezzo + ' €, la compagnia le augura un buon viaggio');
+  alert ('il prezzo del suo biglietto è ' + prezzoBase + ' €, la compagnia le augura un buon viaggio');
 }
